@@ -1,0 +1,1 @@
+enemy_activate = 0;
