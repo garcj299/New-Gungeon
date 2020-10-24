@@ -48,14 +48,17 @@ else
 //animation and death animation
 
 
-if (death_animation = true)
+if (death_animation = true) and (instance_exists(obj_enemy))
 {
-	image_index = death_animation_start;
-	instance_destroy(instance_id,ev_animation_end());
+	if (image_index > image_number - 1)
+	{
+		obj_enemy_gun.firingcooldown = 1000;
+		instance_destroy();
+	}
 }
-else
+else //idle animation
 {
-	if (image_index >= 9)
+	if (image_index >= 8)
 	{
 		image_index = 1;
 	}

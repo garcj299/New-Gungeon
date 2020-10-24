@@ -23,4 +23,5 @@
 		draw_text(370,520,"hp = " + string(obj_player.hp))
 		draw_text(370,540,"obj_health.image_angle= " + string(obj_health.image_index))
 		draw_text(370,560,string(other.yeet))	
+		draw_text(370,300,"spr_enemy.inage_index = " + string(obj_enemy.image_index))
 	}
