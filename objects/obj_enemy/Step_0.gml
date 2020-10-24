@@ -37,10 +37,27 @@ mp_potential_step(x_point,y_point,enemy_speed,false);
 if (enemy_health <= 0)
 {
 	enemy_alive = false;
-	instance_destroy();
+	death_animation = true;
 }
+
 }
 else
 {
 	obj_enemy_gun.can_shoot = 200;
 }
+//animation and death animation
+
+
+if (death_animation = true)
+{
+	image_index = death_animation_start;
+	instance_destroy(instance_id,ev_animation_end());
+}
+else
+{
+	if (image_index >= 9)
+	{
+		image_index = 1;
+	}
+}
+mele_counter -= 1;
